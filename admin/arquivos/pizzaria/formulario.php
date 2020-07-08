@@ -17,6 +17,15 @@
     <div class="input-group">
         <textarea class="form-control" id="summernote" name="descricao" placeholder="Digite o descrição"><?=trim($buscaHistoria->descricao)?></textarea>
     </div>
+    <div class="input-group mt-3">
+        <?php
+            if(!empty($buscaHistoria->arquivo) && !empty($id)){
+                echo '<img src="../imagens pizza/'.$buscaHistoria->arquivo.'" width="150">';
+                echo '<input type="hidden" name="arquivo_auxiliar" value="'.$buscaHistoria->arquivo.'">';
+            }
+        ?>
+        <input type="file" name="arquivo">
+    </div>
     <div class="mt-4 pb-4">
         <button type="submit" class="btn btn-success"><?=$botao?></button>
     </div>

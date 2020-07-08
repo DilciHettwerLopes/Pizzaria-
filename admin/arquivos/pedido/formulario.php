@@ -11,7 +11,7 @@ if(is_numeric($id) && !empty($id)){
     }
     $buscaPedido = mysqli_fetch_object($pedido);
 }else{
-    $titulo = "Formulário de pedido";
+    $titulo = "Formulário de cadastro de pedido";
     $botao = 'Cadastrar';
     $id = '';
 }
@@ -19,7 +19,7 @@ if(is_numeric($id) && !empty($id)){
 ?>
 <div class="row">
     <div class="col-12 col-md-6">
-        <form method="POST" action="index.php?pagina=contato/acoes&id=<?=$id?>" class="form-horizontal" id="form-cardapio">
+        <form method="POST" action="index.php?pagina=pedidos/acoes&id=<?=$id?>" class="form-horizontal" id="form-cardapio">
             <h2 class="display-5" id="titleform"><?=$titulo?></h2>
             <div class="form-group mb-3">
                 <input type="text" value="<?=$buscaPedido->titulo?>" class="form-control" name="titulo" id="titulo" placeholder="Digite o titulo da pizza">
@@ -30,11 +30,11 @@ if(is_numeric($id) && !empty($id)){
                     <?php
                         $cardapios = mysqli_query($link,'SELECT * FROM pedido ORDER BY titulo ASC');
                         while($pedido= mysqli_fetch_object($pedidos)){
-                           echo '<option value="'.$cardapio->id.'" '.($buscaPedido->cardapio==$cardapio->id?"selected":null).'>'.$cardapio->titulo.'</option>';
+                      //      echo '<option value="'.$cardapio->id.'" '.($buscaPublicacao->curso==$curso->id?"selected":null).'>'.$curso->titulo.'</option>';
                         }
                     ?>
                 </select>
-            <!--  <input type="text" value="<?=$buscaPedido->cardapio?>" class="form-control" name="pizza" id="pizza" placeholder="Digite o nome da pizza"> -->
+              <!--<input type="text" value="<?=$buscaPublicacao->curso?>" class="form-control" name="curso" id="curso" placeholder="Digite o nome do curso">-->
             </div>
             <div class="form-group mb-3">
                 <input type="date" value="<?=$buscaPedido->data?>" class="form-control col-12 col-md-5" name="data" id="data" placeholder="Selecione a data">

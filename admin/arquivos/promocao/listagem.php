@@ -2,7 +2,7 @@
         <h2 class="display-5" id="title-table">Promoção</h2>
         <a href="index.php?pagina=promocoes/formulario" class="btn btn-info">Cadastrar uma nova promoção</a>
         <?php
-        $sqlPromocoes = mysqli_query($link, "SELECT * FROM promocao ORDER BY nome ASC");
+        $sqlPromocoes = mysqli_query($link, "SELECT * FROM promocao ORDER BY titulo ASC");
         if (mysqli_num_rows($sqlPromocoes) > 0) {
         ?>
         <table class="table mt-3">
@@ -23,7 +23,7 @@
                 <tr>
                     <th scope="row"><?= $x ?></th>
                     <td> 
-                    <img src = "../imagens pizza/promocao/<?= $rowPromocoes->arquivo;?>" width= "80">
+                    <img src = "../imagens pizza/promocao<?= $rowPromocoes->arquivo;?>" width= "80">
                     </td>
                     <td><?= $rowPromocoes->titulo; ?></td>
                     <td><?= $rowPromocoes->descricao; ?></td>

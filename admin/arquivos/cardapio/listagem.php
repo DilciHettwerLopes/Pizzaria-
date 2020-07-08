@@ -2,8 +2,8 @@
         <h2 class="display-5" id="title-table">Últimas pizzas</h2>
         <a href="index.php?pagina=publicacoes/formulario" class="btn btn-info mb-4">Cadastrar nova pizza</a>
         <?php
-        $sqlCardapios = mysqli_query($link, "SELECT cardapio.*,DATE_FORMAT(data,'%d/%m/%Y') data,curso.titulo FROM publicacao INNER JOIN curso ON curso.id=publicacao.curso ORDER BY aluno ASC");
-        if (mysqli_num_rows($sqlPublicacoes) > 0) {
+        $sqlCardapios = mysqli_query($link, "SELECT cardapio.*,DATE_FORMAT(data,'%d/%m/%Y') data, titulo FROM cardapio ORDER BY titulo ASC");
+        if (mysqli_num_rows($sqlCardapios) > 0) {
         ?>
         <table class="table table-striped" data-toggle="data-tables" style="width:100%">
             <thead>
@@ -11,8 +11,6 @@
                 <th scope="col">#</th>
                 <th scope="col">Titulo</th>
                 <th scope="col">Descricao</th>
-                <th scope="col">Imagem</th>
-                <th scope="col">Opções</th>
             </tr>
             </thead>
             <tbody>
@@ -25,7 +23,6 @@
                     <th scope="row"><?= $x ?></th>
                     <td><?= $rowCardapios->titulo; ?></td>
                     <td><?= $rowCardapios->descricao; ?></td>
-                    <td><?= $rowCardapios->imagem; ?></td>
                     <td>
                         <a class="btn btn-danger btn-apagar" href="index.php?pagina=cardapios/acoes&acao=apagar&id=<?= $rowCardapios->id; ?>">Apagar</a>
                         <a class="btn btn-info" href="index.php?pagina=cardapios/formulario&id=<?= $rowCardapios->id; ?>">Alterar</a>

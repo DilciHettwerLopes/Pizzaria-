@@ -28,7 +28,7 @@ if(is_numeric($id) && !empty($id)){
         <div class="input-group mt-3">
         <?php
             if(!empty($buscaPromocao->arquivo) && !empty($id)){
-                echo '<img src="../imagens pizza/promocao/'.$buscaPromocao->arquivo.'" width="150">';
+                echo '<img src="../imagens pizza/promocao'.$buscaPromocao->arquivo.'" width="150">';
                 echo '<input type="hidden" name="arquivo_auxiliar" value="'.$buscaPromocao->arquivo.'">';
             }
         ?>

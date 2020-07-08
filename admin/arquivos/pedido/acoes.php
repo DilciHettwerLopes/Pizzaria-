@@ -22,9 +22,9 @@ if($pagina=='pedido/acoes' && $_POST) {
     if(empty($titulo) || empty($descricao)){
         $_SESSION['mensagem'] = '<div class="alert alert-danger">Preencha corretamente todos os campos obrigatórios.</div>';
         if (!empty($id)) {
-            header('Location:index.php?pagina=contato/formulario&id='.$id);
+            header('Location:index.php?pagina=pedido/formulario&id='.$id);
         }else{
-            header('Location:index.php?pagina=contato/formulario');
+            header('Location:index.php?pagina=pedido/formulario');
         }
     }else {
         if (!empty($id)) {
@@ -33,7 +33,7 @@ if($pagina=='pedido/acoes' && $_POST) {
                 $retorno = array(
                     'result' => true,
                     'mensagem' => 'Pedido alterado com sucesso',
-                    'url' => 'index.php?pagina=contato/listagem'
+                    'url' => 'index.php?pagina=pedido/listagem'
                 );
                 $_SESSION['mensagem'] = '<div class="alert alert-success">Pedido alterado com sucesso.</div>';
             } else {
@@ -49,7 +49,7 @@ if($pagina=='pedido/acoes' && $_POST) {
                 $retorno = array(
                     'result' => true,
                     'mensagem' => 'Pedido cadastrado com sucesso',
-                    'url' => 'index.php?pagina=contato/listagem'
+                    'url' => 'index.php?pagina=pedidos/listagem'
                 );
                 $_SESSION['mensagem'] = '<div class="alert alert-success">Pedido cadastrado com sucesso.</div>';
             } else {

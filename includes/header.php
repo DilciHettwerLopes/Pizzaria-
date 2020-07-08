@@ -56,7 +56,7 @@ if(isset($_POST) && array_key_exists('nome', $_POST)){
             <div class="col-12 md-5 center">
                 <!-- Navbar-->
                 <nav class="navbar navbar-expand-lg navbar navbar" style="background-color: #f5260b;">
-                    <a class="navbar-brand cor-nav" href="#">Home</a>
+                    <a class="navbar-brand cor-nav" href="index.php?pagina=home/listagem">Home</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -66,14 +66,14 @@ if(isset($_POST) && array_key_exists('nome', $_POST)){
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                                <a class="nav-link cor-nav" href="#">Pizzaria<span class="sr-only">(current)</span></a>
+                                <a class="nav-link cor-nav" href="index.php?pagina=pizzarias/listagem">Pizzaria<span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item active">
-                                <a class="nav-link cor-nav" href="#">Promoções <span
+                                <a class="nav-link cor-nav" href="index.php?pagina=promocoes/listagem">Promoções <span
                                         class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle cor-nav" href="#" id="navbarDropdown" role="button"
+                                <a class="nav-link dropdown-toggle cor-nav" href="index.php?pagina=cardapios/listagem" id="navbarDropdown" role="button"
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Cardapio
                                 </a>
@@ -84,7 +84,7 @@ if(isset($_POST) && array_key_exists('nome', $_POST)){
                                     <a class="dropdown-item" href="#">Petiscos</a>
                                 </div>
                             <li class="nav-item">
-                                <a class="nav-link cor-nav" href="#">Pedido</a>
+                                <a class="nav-link cor-nav" href="index.php?pagina=pedidos/listagem">Pedido</a>
                             </li>
                         </ul>
                         <form class="form-inline my-2 my-lg-0">
@@ -179,7 +179,6 @@ if(isset($_POST) && array_key_exists('nome', $_POST)){
                 </div>
             </div>
         </div>
-
         <div class="row mt-2 mb-5">
             <div class="col-8 text-center">
                 <table class="table table-bordered responsive-lg">
@@ -349,54 +348,7 @@ if(isset($_POST) && array_key_exists('nome', $_POST)){
 
             </div>
         </div>
-        <!-- Formulario de entrega-->
-        <div class="row mt-2 mb-5">
-            <div class="col-8">
-                <h3>Meu Pedido</h3>
-                <form name="pedido" method="GET" action="page01.php" id="form-user">
-                    <div class="form-group">
-                        <label for="nome">Nome:</label>
-                        <input type="text" class="form-control" id="nome" name="nome" aria-describedby="emailHelp">
-                    </div>
-                    <div class="form-group">
-                        <label for="telefone">Telefone:</label>
-                        <input type="number" class="form-control" id="telefone" name="telefone">
-                    </div>
-                    <div class="form-group">
-                        <label for="cep">CEP:</label>
-                        <input type="text" class="form-control" id="cep" name="cep">
-                    </div>
-                    <div class="form-group">
-                        <label for="rua">Rua:</label>
-                        <input type="text" class="form-control" id="rua" name="rua">
-                    </div>
-                    <div class="form-group">
-                        <label for="numero">Numero:</label>
-                        <input type="text" class="form-control" id="numero" name="numero">
-                    </div>
-                    <div class="form-group">
-                        <label for="bairro">Bairro:</label>
-                        <input type="text" class="form-control" id="bairro" name="bairro">
-                    </div>
-                    <div class="form-group">
-                    <label for="cidade"> Cidade:</label>
-                    <input type="text" class="form-control" id="cidade" name="cidade">
-                </div>
-                      <div class="form-group">
-                <label for="borda"></label>Borda:</label>
-                <select class="form-inline" id="borda" name="borda">
-                    <option selected>Sim</option>
-                    <option>Não</option>
-                </select>
-            </div>
-                       <div class="form-group">
-                <label for="pedido">Descrição do pedido:</label>
-                <input type="text" class="form-control" id="pedido" name="pedido">
-            </div>
-            <button type="comprar" class="btn btn-primary" id="btn-comprar">Comprar</button>
-            </form>
-            <hr class="featurette-divider">
-        </div>
+     
         <!--toast-->
         <div style="position: relative; min-height: 200px;">
             <div style="position: fixed; top: 0; right: 0;">
@@ -454,7 +406,6 @@ if(isset($_POST) && array_key_exists('nome', $_POST)){
         </div>
     </div>
     </div>
-
     <!--modal-->
     <div class="row">
         <div class="col-12 text-center">
@@ -485,7 +436,7 @@ if(isset($_POST) && array_key_exists('nome', $_POST)){
         </div> <br> <br>
     </div> <br> <br>
    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="js/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
@@ -500,6 +451,5 @@ if(isset($_POST) && array_key_exists('nome', $_POST)){
      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"
     <script src="js/jquery-3.4.0.min.js"></script> -->
 </body>
-
 </html>
     </header>

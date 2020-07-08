@@ -29,7 +29,7 @@
         }
     }
 
-    $sqlPromocao = mysqli_query($link, "SELECT * FROM promocao $busca GROUP BY nome ASC");
+    $sqlPromocao = mysqli_query($link, "SELECT * FROM promocao $busca GROUP BY titulo ASC");
     if (mysqli_num_rows($sqlPromocao) < 1) {
         echo '<div class="col"><div class="alert alert-info col">Nenhuma promoção cadastrada.</div></div>';
     } else {

@@ -11,10 +11,10 @@ if (empty($jsonrequest) || @$jsonrequest != '1') {
     require_once "includes/header.php";//faz a inclusão do arquivo de cabeçalho
 }
 
-    if($_SESSION['mensagem']){
+    /*if($_SESSION['mensagem']){
         echo $_SESSION['mensagem'];
         unset($_SESSION['mensagem']);
-    }
+    }*/
 
     $pagina = @$_GET['pagina'];
     if(empty($pagina)){//verifica se tem algo na url
@@ -28,5 +28,5 @@ if (empty($jsonrequest) || @$jsonrequest != '1') {
     }
 
 if (empty($jsonrequest) || @$jsonrequest != '1') {
-    require_once "includes/footer.php";////faz a inclusão do arquivo de rodapé
+    require_once "../includes/footer.php";////faz a inclusão do arquivo de rodapé
 }

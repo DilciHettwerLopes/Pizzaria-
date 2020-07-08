@@ -16,20 +16,8 @@ if (mysqli_num_rows($sqlHistoria) > 0) {
 <?php }
 $sqlHistorias = mysqli_query($link, "SELECT * FROM historia ORDER BY titulo ASC");
 if (mysqli_num_rows($sqlHistorias) > 0) {
-    ?>
-    <div class="table-responsive">
-        <h2 class="display-5" id="title-table">Últimas publicações</h2>
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Titulo</th>
-                <th scope="col">Descricao</th>
-            </tr>
-            </thead>
-            <tbody>
-            <?php
-            $x = 0;
+
+    $x = 0;
             while ($rowHistorias = mysqli_fetch_object($sqlHistorias)) {
                 $x++;
                 ?>

@@ -11,7 +11,7 @@ if(mysqli_num_rows($promocao)<1){
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.php">Página Inicial</a></li>
-                <li class="breadcrumb-item"><a href="index.php?pagina=cursos">Promocao</a></li>
+                <li class="breadcrumb-item"><a href="index.php?pagina=promocao">Promocao</a></li>
                 <li class="breadcrumb-item" aria-current="page"><?=$row->nome?></li>
             </ol>
         </nav>
@@ -25,10 +25,10 @@ if(mysqli_num_rows($promocao)<1){
     <div class="row pb-5">
         <div class="col-6">
             <img class="img-fluid" src= "imagens pizza/promocao/11.jpg<?= $row->arquivo ?>"
-                 alt="<?= $row->nome ?>">
+                 alt="<?= $row->titulo ?>">
         </div>
         <div class="col-6">
-            <?=$row->conteudo?>
+            <?=$row->descricao?>
         </div>
     </div>
     <?php

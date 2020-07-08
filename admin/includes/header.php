@@ -38,7 +38,7 @@
             </div>
         </div>
         <div id="menu">
-            <div class="nav-scroller">
+            <div class="nav-scroller text-white">
                 <nav class="nav d-flex justify-content-between" style="background-color: #8b0000;">
                     <a class="p-2 text-muted" href="index.php?pagina=home/listagem">Home</a>
                     <a class="p-2 text-muted" href="index.php?pagina=pizzaria/listagem">Pizzaria</a>

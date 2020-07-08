@@ -1,4 +1,5 @@
 </div>
+<br>
 <div style="position: relative; ">
     <div style="position: fixed; top: 10px; right: 10px;">
         <div class="toast" id="toast-cadastro" role="alert" aria-live="assertive" aria-atomic="true">
@@ -47,6 +48,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.9/js/fileinput.min.js"></script>
 <!-- optionally if you need translation for your language then include the locale file as mentioned below (replace LANG.js with your language locale) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-fileinput/5.0.9/js/locales/pt-BR.js"></script>
-    <script src="../public/js/senac.js"></script>
+    <script src="js/page01.js"></script>
 </body>
 </html>
